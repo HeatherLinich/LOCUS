@@ -1,0 +1,198 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+#top {
+    background-color:#ffd700;
+    color:white;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom: 0px;
+    margin: 0px;
+    height: 100px;
+    font-size: 20pt;
+    }
+    
+.cart {
+    line-height:30px;
+    background-color:#800000;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    height:875px;
+    width:150px;
+    float:left;
+    padding:0px;
+    margin: 0px;
+}
+
+#studentHeader {
+    position: absolute;
+    text-align: center;
+    font-style: italic;
+    width: 350px;
+    top: 150;
+    color:black;
+    left: 775px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 18pt;
+    
+}
+
+#chart_div {
+    
+    position:absolute;
+    left: 100px;
+    top: 220px;
+    padding:10px;
+    z-index: -1;
+    
+}
+
+#pieChartTitle
+{
+    position:absolute;
+    left: 365px;
+    top: 255px;
+    padding:10px;
+    text-align: center;
+    font-size: 10pt;
+}
+
+#classes
+{
+    position:absolute;
+    left: 850px;
+    top: 255px;
+    padding:10px;
+    text-align: center;
+    font-size: 10pt;
+}
+
+#sections
+{
+    position:absolute;
+    left:850px;
+    top:325px;
+    padding:10px;
+    border: none;
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 350px;
+    font-size: 16pt;
+    
+}
+
+#classTable
+{
+ border: 2px solid black;
+ border-collapse:collapse;
+
+}
+
+.classHeading,.classRow, .classData
+{
+    border: 1px solid black;
+    font-size: 14pt;
+}
+
+.classHeading
+{
+    background-color:black;
+    color:white;
+}
+
+#classCaption
+{
+  background: #d3d3d3;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  
+}
+        
+.infoHeadings
+{
+    background: #d3d3d3;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.classDetailText {
+    
+    font-size:12pt;
+}
+
+
+#mainPage
+{
+    position:absolute;
+    left: 175px;
+    float: bottom;
+    padding:10px;
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ffd700;
+    width: 125px;
+    border-radius: 10px;
+}
+
+#back
+{
+    position:absolute;
+    left: 325px;
+    float: bottom;
+    padding:10px;
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: gray;
+    width: 125px;
+    border-radius: 10px;
+}
+
+#enroll
+{
+    position:absolute;
+    left: 475px;
+    float: bottom;
+    padding:10px;
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: green;
+    width: 125px;
+    border-radius: 10px;
+}
+
+#studentInfo{
+    position:absolute;
+    border: thick;
+    left: 1600px;
+    top: 150 px;
+    font-size: medium;
+    width: 300px;
+}
+
+#infoCaption{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.infoRow{
+    background: black;
+    color: white;
+    font-size: 16pt;
+}
+
+.infoRow2{
+    font-size: 16pt;
+}

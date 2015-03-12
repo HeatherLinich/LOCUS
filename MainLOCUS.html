@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+            
+    <script type="text/javascript" src="scripts/d3.min.js"></script>    
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+
+<script type="text/javascript">
+
+      google.load('visualization', '1.0', {'packages':['corechart']});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'ClassCategory');
+        data.addColumn('number', 'ClassesTaken');
+        data.addRows([
+          ['English', 10],
+          ['Science', 6],
+          ['Math', 0],
+          ['History', 10],
+          ['Communications', 2]
+        ]);
+
+        var options = {
+            width: 700,
+            height: 500,
+            legend: 'none',
+            colors: ['#33cc00', '#ffd700', '#ff0000', '#33cc00', '#ffd700']};
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <title>New LOCUS</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    
+    <div id="top">
+        <h1 id="title">LOCUS</h1>
+        
+    </div>
+
+    <div id="studentHeader">
+        <h2>Nick Hayward's Student Snapshot</h2>
+        
+    </div>   
+    
+    <div class="cart">
+        <h3>Shopping Cart</h3>
+        <p>...to be added...</p>
+        
+    </div>
+
+    <div id="pieChartTitle">
+        <h1>
+            Course Progress
+        </h1>
+    </div>
+    
+    <div id="chart_div">
+        
+    </div>
+    
+    <div id="classes">
+        <h1>
+            Course Sections
+        </h1>
+    </div>
+
+    <table id="sections" >
+        <tr class="sectionsRow">
+            <td class="sectionsData"> <img src="GreenStar.png"></img></td>
+            <td class="sectionsData">English</td>
+            <td class="sectionsData"><a href = "AvailableEnglishClasses.html">  Enroll</a></td>
+            <td class="sectionsData"><a href = "CompletedEnglishClasses.html">  Completed</a></td>
+        </tr>
+        <tr class="sectionsRow">
+            <td class="sectionsData"> <img src="YellowCircle.png"></img></td>
+            <td class="sectionsData">Science</td>
+            <td class="sectionsData">Enroll</td>
+            <td class="sectionsData">Completed</td>
+        </tr>
+        <tr class="sectionsRow">
+            <td class="sectionsData"> <img src="RedX.png"></img></td>
+            <td class="sectionsData">Math</td>
+            <td class="sectionsData">Enroll</td>
+            <td class="sectionsData">Completed</td>
+        </tr>
+        <tr class="sectionsRow">
+            <td class="sectionsData"> <img src="GreenStar.png"></img></td>
+            <td class="sectionsData">History</td>
+            <td class="sectionsData">Enroll</td>
+            <td class="sectionsData">Completed</td>
+        </tr>
+        <tr class="sectionsRow">
+            <td class="sectionsData"> <img src="YellowCircle.png"></img></td>
+            <td class="sectionsData">Communications</td>
+            <td class="sectionsData">Enroll</td>
+            <td class="sectionsData">Completed</td>
+        </tr>
+        
+        
+    </table>
+    
+    <table id="studentInfo">
+        
+        <tr id="studentInfoTableRow">
+        <td class="infoRow">Student Name:</tr>
+        <td class="infoRow2">Nicholas Hayward</tr>
+        <td class="infoRow">Student ID Number:</tr>
+        <td class="infoRow2">0001234</tr>
+        <td class="infoRow">Major/Minor:</tr>
+        <td class="infoRow2">Computer Science/archaeology</tr>
+        <td class="infoRow">Contact Information:</tr>
+        <td class="infoRow2">500 State St, Chicago IL </tr>
+        <td class="infoRow2">773-555-5555</td>
+        </tr>
+        
+        <caption id="infoCaption">Student Info</caption>
+        
+    </table>
+        
+        
+        
+        
+</body>
+</html>
