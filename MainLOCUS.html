@@ -24,24 +24,31 @@
         data.addColumn('string', 'ClassCategory');
         data.addColumn('number', 'ClassesTaken');
         data.addRows([
-          ['English', 10],
+          ['English', 11],
           ['Science', 6],
-          ['Math', 0],
+          ['Math', 18],
           ['History', 10],
-          ['Communications', 2]
+          ['Communications', 6]
         ]);
 
         var options = {
             width: 700,
             height: 500,
             legend: 'none',
-            colors: ['#33cc00', '#ffd700', '#ff0000', '#33cc00', '#ffd700']};
+            colors: ['#9a32cd', '#6495ed', '#006400', '#ff4500', '#ff0000']};
 
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
     </script>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="jquery.diagram.js"></script>
+    
+    
+    
+    
+    
     <title>New LOCUS</title>
     <link rel="stylesheet" href="Style.css">
 </head>
@@ -82,31 +89,31 @@
     <table id="sections" >
         <tr class="sectionsRow">
             <td class="sectionsData"> <img src="GreenStar.png"></img></td>
-            <td class="sectionsData">English</td>
+            <td class="sectionsData" id="english">English</td>
             <td class="sectionsData"><a href = "AvailableEnglishClasses.html">  Enroll</a></td>
             <td class="sectionsData"><a href = "CompletedEnglishClasses.html">  Completed</a></td>
         </tr>
         <tr class="sectionsRow">
             <td class="sectionsData"> <img src="YellowCircle.png"></img></td>
-            <td class="sectionsData">Science</td>
+            <td class="sectionsData" id="science">Science</td>
             <td class="sectionsData">Enroll</td>
             <td class="sectionsData">Completed</td>
         </tr>
         <tr class="sectionsRow">
             <td class="sectionsData"> <img src="RedX.png"></img></td>
-            <td class="sectionsData">Math</td>
+            <td class="sectionsData" id="math">Math</td>
             <td class="sectionsData">Enroll</td>
             <td class="sectionsData">Completed</td>
         </tr>
         <tr class="sectionsRow">
             <td class="sectionsData"> <img src="GreenStar.png"></img></td>
-            <td class="sectionsData">History</td>
+            <td class="sectionsData" id="history">History</td>
             <td class="sectionsData">Enroll</td>
             <td class="sectionsData">Completed</td>
         </tr>
         <tr class="sectionsRow">
             <td class="sectionsData"> <img src="YellowCircle.png"></img></td>
-            <td class="sectionsData">Communications</td>
+            <td class="sectionsData" id="communications">Communications</td>
             <td class="sectionsData">Enroll</td>
             <td class="sectionsData">Completed</td>
         </tr>
@@ -131,8 +138,25 @@
         <caption id="infoCaption">Student Info</caption>
         
     </table>
-        
-        
+
+
+<div id="circleChart" data-percent="32.65%"></div>
+
+
+<script>
+	$(function() {
+
+		$('#circleChart').diagram({ 
+			size: "200", // graph size
+                        borderWidth: "30", // border width
+                        textSize: 25, // text color
+                        font: "serif", // font
+                        textColor: "black" // text color
+		});
+
+	})
+</script>
+    
         
         
 </body>

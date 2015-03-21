@@ -5,6 +5,22 @@
     <title>Details on English 102</title>
     <link rel="stylesheet" href="Style.css">
     <script src="buttonScripts.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+    <script>
+       $(document).ready(function(){
+       $( "#enrollMessage" ).dialog({ autoOpen: false });
+       $( "#enroll" ).click(function() {
+       $( "#enrollMessage" ).dialog( "open" );
+       });
+       });
+    </script>
+
+
+
+
 </head>
 <body>
        
@@ -92,6 +108,9 @@
     <button type="button" id="mainPage" onclick="mainPageClick();">Main page</button>
     <button type="button" id="back" onclick="backClick();">Class list</button>
     <button type="button" id="enroll" onclick="enrollClick();">Enroll</button>
+    
+    <div id="enrollMessage" title="Enrolled!"><p><font face="Georgia" size="4">
+     Successfully enrolled in English 102 for Fall 2015</font></p></div>
         
     </body>
 </html>

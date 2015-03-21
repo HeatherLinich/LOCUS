@@ -62,6 +62,12 @@ body{
     font-size: 10pt;
 }
 
+#circleChart{
+    position:absolute;
+    left: 365px;
+    top: 600px;
+}
+
 #classes
 {
     position:absolute;
@@ -126,6 +132,31 @@ body{
     font-size:12pt;
 }
 
+
+#english {
+    color: #9a32cd;
+    font-weight: bold; 
+}
+
+#science {
+    color: #6495ed;
+    font-weight: bold;
+}
+
+#math{
+    color: #006400;
+    font-weight: bold;
+}
+
+#history {
+    color: #ff4500;
+    font-weight: bold;
+}
+
+#communications {
+    color: #ff0000;
+    font-weight: bold;
+}
 
 #mainPage
 {

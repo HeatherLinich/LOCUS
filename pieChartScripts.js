@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
 
       google.load('visualization', '1.0', {'packages':['corechart']});
       google.setOnLoadCallback(drawChart);
@@ -26,4 +26,4 @@
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
-    </script>
+    
