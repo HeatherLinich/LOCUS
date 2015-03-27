@@ -3,24 +3,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title>Available English Classes</title>
-    <link rel="stylesheet" href="Style.css">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css"/> 
         
-     <script src="buttonScripts.js"></script>   
+     <script src="js/buttonScripts.js"></script>   
         
     
 </head>
 <body>
     
-    <div id="top">
-        <h1>LOCUS</h1>
+    <div class="container-fluid">            
+            <div class="row-fluid"> 
+                <div class="span12" id= "top"><p id="LOCUS">LOCUS</p><p id="name">Welcome, Nick Hayward</p></div></div></div>
         
-    </div>
-        
-     <div class="cart">
-        Shopping Cart<br>
-        Other Stuff....
-        
-    </div>
+    <div class="container-fluid">            
+            <div class="row-fluid"> 
+                <div class="span12" id="snapshot">
+                    <p><center>Available English Classes</center></p></div></div></div>
+    
+    <div class="container-fluid">            
+                    <div class="row-fluid">
+                        <div class="span2" id="shoppingCart"><center><p id="cartText">Shopping Cart</p></center></div>
+            
+    <div class="span8">
      
     <table id="classTable">
         
@@ -53,13 +64,16 @@
             <td class="classData">Enroll</td>
             
         </tr>
-        
-        <caption id="classCaption">All available English Classes - Fall Semester 2015</caption>
  
     </table>
     
+    </div>
+    
+    <div class="span2">
     
     <button type="button" id="mainPage" onclick="mainPageClick();">Main page</button>
+    
+    </div></div></div>
     
     
 </body>

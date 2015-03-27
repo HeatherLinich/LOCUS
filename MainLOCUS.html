@@ -3,15 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-            
-    <script type="text/javascript" src="scripts/d3.min.js"></script>    
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css"/> 
+        
+        <script src="js/buttonScripts.js"></script>     
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
 <script type="text/javascript">
 
@@ -43,121 +44,182 @@
     </script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="jquery.diagram.js"></script>
-    
-    
-    
-    
+    <script src="js/jquery.diagram.js"></script>
     
     <title>New LOCUS</title>
-    <link rel="stylesheet" href="Style.css">
+    
 </head>
 <body>
+
+    <div class="container-fluid">            
+        <div class="row-fluid"> 
+            <div class="span12" id= "top"><p id="LOCUS">LOCUS</p><p id="name">Welcome, Nick Hayward</p></div></div></div>
+
+    <div class="container-fluid">            
+        <div class="row-fluid"> 
+            <div class="span12" id="snapshot">
+                <p><center>Student Snapshot</center></p></div></div></div>
+        
+    <div class="container-fluid">            
+        <div class="row-fluid">
+            <div class="span2" id="shoppingCart">
+                <center><p id="cartText">Class Cart</p></center>
+                <p id="enrollDate">*Next enrollment date is April 9*</p>
+                <center><select id="enrollSemester">  
+                    <option value="0">Enrollment Semester</option>
+                    <option value="1">Summer 2015</option>
+                    <option value="2">Fall 2015</option>
+                </select></center>
+                <p id="enrollment">Pending enrollment:</p>
+                <center><select id="Schedules" onchange="schedulesFunction()">  
+                    <option value="0">View Schedule</option>
+                    <option value="1">Spring 2015</option>
+                    <option value="2">Fall 2014</option>
+                    <option value="3">Summer 2014</option>
+                </select></center></div>
+            <div class="span4">
+                <center><h2 id="courseProgress">Course Progress</h2>  </center>                              
+                <center><div id="chart_div"></div></center></div>
+            <div class="span4">
+                <center><h2 id="courseSections">Course Sections</h2></center>
+                    <table id="sections" >
+                    <tr class="sectionsRow">
+                        <td class="sectionsData"><div id="progressBar1" data-percent="72%"></div></td>
+                        <td class="sectionsData" id="english">English</td>
+                        <td class="sectionsData"><a href = "AvailableEnglishClasses.html">  Enroll</a></td>
+                        <td class="sectionsData"><a href = "CompletedEnglishClasses.html">  Completed</a></td>
+                    </tr>
+                    <tr class="sectionsRow">
+                        <td class="sectionsData"><div id="progressBar2" data-percent="33%"></div></td>
+                        <td class="sectionsData" id="science">Science</td>
+                        <td class="sectionsData">Enroll</td>
+                        <td class="sectionsData">Completed</td>
+                    </tr>
+                    <tr class="sectionsRow">
+                        <td class="sectionsData"><div id="progressBar3" data-percent="50%"></div></td>
+                        <td class="sectionsData" id="math">Math</td>
+                        <td class="sectionsData">Enroll</td>
+                        <td class="sectionsData">Completed</td>
+                    </tr>
+                    <tr class="sectionsRow">
+                        <td class="sectionsData"><div id="progressBar4" data-percent="15%"></div></td>
+                        <td class="sectionsData" id="history">History</td>
+                        <td class="sectionsData">Enroll</td>
+                        <td class="sectionsData">Completed</td>
+                    </tr>
+                    <tr class="sectionsRow">
+                        <td class="sectionsData"><div id="progressBar5" data-percent="100%"></div></td>
+                        <td class="sectionsData" id="communications">Communications</td>
+                        <td class="sectionsData">Enroll</td>
+                        <td class="sectionsData">Completed</td>
+                    </tr>    
+                    </table></div>
+            <div class="span2" id="infoTable">
+                <table id="studentInfo">        
+                    <tr id="studentInfoTableRow">
+                    <td class="infoRow">Student Name:</tr>
+                    <td class="infoRow2">Nicholas Hayward</tr>
+                    <td class="infoRow">Student ID Number:</tr>
+                    <td class="infoRow2">0001234</tr>
+                    <td class="infoRow">Major/Minor:</tr>
+                    <td class="infoRow2">Computer Science/archaeology</tr>
+                    <td class="infoRow">Address:</tr>
+                    <td class="infoRow2">500 State St, Chicago IL </tr>
+                    <td class="infoRow">Phone Number:</tr>
+                    <td class="infoRow2">773-555-5555</tr>
+                    <td class="infoRow">Cumulative GPA:</tr>
+                    <td class="infoRow2">3.85 </tr>
+                    <td class="infoRow">Major GPA:</tr>
+                    <td class="infoRow2">3.91 </tr>
+                    </tr>
+                        <caption id="infoCaption">Student Info</caption>
+                </table></div></div></div>              
+    <div id="chart_div"></div>
+                
+    <script> 
+        $(function() {
+            $('#progressBar1').diagram({ 
+            size: "50", // graph size 
+            borderWidth: "6", // border width 
+            bgFill: "#f5f5f5", // background color 
+            frFill: "#9a32cd", // foreground color 
+            textSize: 15, // text color 
+            font: "san_serif", // font 
+            textWeight: "bold",
+            textColor: 'black' // text color 
+            }); 
+            
+            })
+                
+    </script>
+    <script> 
+        $(function() {
+            $('#progressBar2').diagram({ 
+            size: "50", // graph size 
+            borderWidth: "6", // border width 
+            bgFill: "#f5f5f5", // background color 
+            frFill: "#6495ed", // foreground color 
+            textSize: 15, // text color 
+            font: "san_serif", // font 
+            textWeight: "bold",
+            textColor: 'black' // text color 
+            }); 
+            
+            })
+                
+    </script>
     
-    <div id="top">
-        <h1 id="title">LOCUS</h1>
-        
-    </div>
-
-    <div id="studentHeader">
-        <h2>Nick Hayward's Student Snapshot</h2>
-        
-    </div>   
+    <script> 
+        $(function() {
+            $('#progressBar3').diagram({ 
+            size: "50", // graph size 
+            borderWidth: "6", // border width 
+            bgFill: "#f5f5f5", // background color 
+            frFill: "#006400", // foreground color 
+            textSize: 15, // text color 
+            font: "san_serif", // font 
+            textWeight: "bold",
+            textColor: 'black' // text color 
+            }); 
+            
+            })
+                
+    </script>
     
-    <div class="cart">
-        <h3>Shopping Cart</h3>
-        <p>...to be added...</p>
-        
-    </div>
-
-    <div id="pieChartTitle">
-        <h1>
-            Course Progress
-        </h1>
-    </div>
+    <script> 
+        $(function() {
+            $('#progressBar4').diagram({ 
+            size: "50", // graph size 
+            borderWidth: "6", // border width 
+            bgFill: "#f5f5f5", // background color 
+            frFill: "#ff4500", // foreground color 
+            textSize: 15, // text color 
+            font: "san_serif", // font 
+            textWeight: "bold",
+            textColor: 'black' // text color 
+            }); 
+            
+            })
+                
+    </script>
     
-    <div id="chart_div">
-        
-    </div>
+    <script> 
+        $(function() {
+            $('#progressBar5').diagram({ 
+            size: "50", // graph size 
+            borderWidth: "6", // border width 
+            bgFill: "#f5f5f5", // background color 
+            frFill: "#ff0000", // foreground color 
+            textSize: 15, // text color 
+            font: "san_serif", // font 
+            textWeight: "bold",
+            textColor: 'black' // text color 
+            }); 
+            
+            })
+                
+    </script>
     
-    <div id="classes">
-        <h1>
-            Course Sections
-        </h1>
-    </div>
-
-    <table id="sections" >
-        <tr class="sectionsRow">
-            <td class="sectionsData"> <img src="GreenStar.png"></img></td>
-            <td class="sectionsData" id="english">English</td>
-            <td class="sectionsData"><a href = "AvailableEnglishClasses.html">  Enroll</a></td>
-            <td class="sectionsData"><a href = "CompletedEnglishClasses.html">  Completed</a></td>
-        </tr>
-        <tr class="sectionsRow">
-            <td class="sectionsData"> <img src="YellowCircle.png"></img></td>
-            <td class="sectionsData" id="science">Science</td>
-            <td class="sectionsData">Enroll</td>
-            <td class="sectionsData">Completed</td>
-        </tr>
-        <tr class="sectionsRow">
-            <td class="sectionsData"> <img src="RedX.png"></img></td>
-            <td class="sectionsData" id="math">Math</td>
-            <td class="sectionsData">Enroll</td>
-            <td class="sectionsData">Completed</td>
-        </tr>
-        <tr class="sectionsRow">
-            <td class="sectionsData"> <img src="GreenStar.png"></img></td>
-            <td class="sectionsData" id="history">History</td>
-            <td class="sectionsData">Enroll</td>
-            <td class="sectionsData">Completed</td>
-        </tr>
-        <tr class="sectionsRow">
-            <td class="sectionsData"> <img src="YellowCircle.png"></img></td>
-            <td class="sectionsData" id="communications">Communications</td>
-            <td class="sectionsData">Enroll</td>
-            <td class="sectionsData">Completed</td>
-        </tr>
-        
-        
-    </table>
-    
-    <table id="studentInfo">
-        
-        <tr id="studentInfoTableRow">
-        <td class="infoRow">Student Name:</tr>
-        <td class="infoRow2">Nicholas Hayward</tr>
-        <td class="infoRow">Student ID Number:</tr>
-        <td class="infoRow2">0001234</tr>
-        <td class="infoRow">Major/Minor:</tr>
-        <td class="infoRow2">Computer Science/archaeology</tr>
-        <td class="infoRow">Contact Information:</tr>
-        <td class="infoRow2">500 State St, Chicago IL </tr>
-        <td class="infoRow2">773-555-5555</td>
-        </tr>
-        
-        <caption id="infoCaption">Student Info</caption>
-        
-    </table>
-
-
-<div id="circleChart" data-percent="32.65%"></div>
-
-
-<script>
-	$(function() {
-
-		$('#circleChart').diagram({ 
-			size: "200", // graph size
-                        borderWidth: "30", // border width
-                        textSize: 25, // text color
-                        font: "serif", // font
-                        textColor: "black" // text color
-		});
-
-	})
-</script>
-    
-        
-        
 </body>
+       
 </html>

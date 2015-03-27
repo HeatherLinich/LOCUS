@@ -1,0 +1,250 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "helvetica";
+    
+}
+
+#top {
+    background-color:#800000;
+    color:white;
+    vertical-align: middle;
+    height: 100px;
+    font-size: 35pt;
+    
+    }
+    
+#LOCUS {
+    padding-left: 20px;
+    text-align:left;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+#name {
+    padding-right: 10px;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 16pt;
+}
+
+#shoppingCart {
+    background-color:#800000;
+    float:left;
+    height: 900px;
+}
+
+#cartText {
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 20pt;
+    padding-top:20px;
+}
+
+
+#enrollment {
+    color:white;
+    font-weight: bold;
+    text-align; left;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-top: 15px;
+    padding-bottom: 100px;
+    font-size: 17px;
+}
+
+#enrollDate {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#chart_div {
+    margin-left: -40px;
+}
+
+#classes
+{
+    padding:10px;
+    text-align: center;
+    font-size: 10pt;
+}
+    
+#courseSections{
+    padding-bottom: 70px;
+    margin-left: -180px;
+    
+}
+#sections
+{
+    padding:10px;
+    border: none;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-size: 16pt;
+
+}
+
+.sectionsData {
+    font-size: 16pt;
+    
+}
+
+#classTable
+{
+ border: 2px solid black;
+ border-collapse:collapse;
+ margin-top: 15px;
+
+}
+
+.classHeading,.classRow, .classData
+{
+    border: 1px solid black;
+    font-size: 16pt;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.classHeading
+{
+    background-color:black;
+    color:white;
+    
+}
+
+#classCaption
+{
+  background: #d3d3d3;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+}
+        
+.infoHeadings
+{
+    background: #d3d3d3;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.classDetailText {
+    
+    font-size:12pt;
+}
+
+
+#english {
+    color: #9a32cd;
+    font-weight: bold; 
+}
+
+#science {
+    color: #6495ed;
+    font-weight: bold;
+}
+
+#math{
+    color: #006400;
+    font-weight: bold;
+}
+
+#history {
+    color: #ff4500;
+    font-weight: bold;
+}
+
+#communications {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+#mainPage
+{
+    float: bottom;
+    padding:10px;
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ffd700;
+    border-radius: 10px;
+}
+
+#back
+{
+    float: bottom;
+    padding:10px;
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+#enroll
+{
+    float: bottom;
+    padding:10px;
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: green;
+    width: 125px;
+    border-radius: 10px;
+}
+
+#studentInfo{
+    border: thick;
+    
+}
+
+#infoCaption{
+    padding-bottom: 7px;
+    padding-top: 5px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.infoRow{
+    background: black;
+    color: white;
+    font-size: 18pt;
+    padding: 12px;
+    margin-right: -20px;
+}
+
+.infoRow2{
+    font-size: 18pt;
+    padding: 12px;
+    margin-right: -20px;
+}
+
+#infoTable {
+    margin-right: -20px;
+}
+
+#snapshot {
+    background-color:#800000;
+    color:white;
+    font-style: italic;
+    padding-top: 0;
+    padding-bottom: 5px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#detailedInfo{
+    margin-left: 0px;
+}
