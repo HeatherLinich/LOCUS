@@ -25,8 +25,13 @@
        });
     </script>
 
-
-
+    <script>
+    $(document).ready(function(){
+        $("#enroll").click(function(){
+            $("#pendingClass").text("-English 102");
+        });
+    });
+    </script>
 
 </head>
 <body>
@@ -42,9 +47,25 @@
     
     <div class="container-fluid">            
        <div class="row-fluid">
-         <div class="span2" id="shoppingCart"><center><p id="cartText">Shopping Cart</p></center></div>
+         <div class="span2" id="shoppingCart"><center><p id="cartText">Shopping Cart</p></center>
+          <center><p id="cartText">Class Cart</p></center>
+                <p id="enrollDate">*Next enrollment date is April 9*</p>
+                <center><select id="enrollSemester">  
+                    <option value="0">Enrollment Semester</option>
+                    <option value="1">Summer 2015</option>
+                    <option value="2">Fall 2015</option>
+                </select></center>
+                <p id="enrollment">Pending enrollment:</p>
+                <p id="pendingClass">- None</p>
+                <center><button type="button" id="finalEnroll">Enroll</button></center>
+                <center><select id="Schedules" onchange="schedulesFunction()">  
+                    <option value="0">View Schedule</option>
+                    <option value="1">Spring 2015</option>
+                    <option value="2">Fall 2014</option>
+                    <option value="3">Summer 2014</option>
+                </select></center></div>
     
-          <div class="span8" id="detailedInfo">    
+          <div class="span10" id="detailedInfo">    
               
               <h2 class="infoHeadings">
                   Class Info
@@ -113,18 +134,20 @@
               
               <p class="classDetailText">17/35</p>
           
-          </div>
-    
-    
-          <div class="span2">
-          
-          <button type="button" id="mainPage" onclick="mainPageClick();">Main page</button>
-          <button type="button" id="back" onclick="backClick();">Class list</button>
-          <button type="button" id="enroll" onclick="enrollClick();">Add to Cart</button>
           </div></div></div>
     
     <div id="enrollMessage" title="Success!"><p><font face="Georgia" size="4">
      English 102 for Fall 2015 has been added to the class Shopping Cart</font></p></div>
-        
+    
+    <div class="container-fluid">            
+    <div class="row-fluid">
+        <div class="span2" id="leftPanel2"></div>
+        <div class="span10">
+         <button type="button" id="mainPage" onclick="mainPageClick();">Main page</button>
+          <button type="button" id="back" onclick="backClick();">Class list</button>
+          <button type="button" id="enroll" onclick="enrollClick();">Add to Cart</button>
+          
+        </div></div></div>
+                             
     </body>
 </html>

@@ -17,3 +17,24 @@ function schedulesFunction() {
         window.location="Spring2015.html"; 
     }
 }
+
+function financesPageClick()
+ {
+    window.location="Finances.html"; 
+ }
+ 
+ function advisorsPageClick()
+ {
+    window.location="Advisors.html"; 
+ }
+ 
+ function catalogPageClick()
+ {
+    window.location="CourseCatalog.html"; 
+ }
+ 
+ 
+ function majMinPageClick()
+ {
+    window.location="changeMajMin.html"; 
+ }

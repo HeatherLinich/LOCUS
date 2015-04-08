@@ -71,12 +71,14 @@
                     <option value="2">Fall 2015</option>
                 </select></center>
                 <p id="enrollment">Pending enrollment:</p>
+                <p id="pendingClass">- None</p>
                 <center><select id="Schedules" onchange="schedulesFunction()">  
                     <option value="0">View Schedule</option>
                     <option value="1">Spring 2015</option>
                     <option value="2">Fall 2014</option>
                     <option value="3">Summer 2014</option>
                 </select></center></div>
+            
             <div class="span4">
                 <center><h2 id="courseProgress">Course Progress</h2>  </center>                              
                 <center><div id="chart_div"></div></center></div>
@@ -112,7 +114,14 @@
                         <td class="sectionsData" id="communications">Communications</td>
                         <td class="sectionsData">Enroll</td>
                         <td class="sectionsData">Completed</td>
-                    </tr>    
+                    </tr>
+                    <tr class="sectionsRow">
+                        <td class="sectionsData"><div id="progressBar6" data-percent="71%"></div></td>
+                        <td class="sectionsData" id="totalCredits">Total Credits: 90/128</td>
+                        <td class="sectionsData"></td>
+                        <td class="sectionsData"></td>
+                    </tr>
+                    
                     </table></div>
             <div class="span2" id="infoTable">
                 <table id="studentInfo">        
@@ -135,6 +144,20 @@
                         <caption id="infoCaption">Student Info</caption>
                 </table></div></div></div>              
     <div id="chart_div"></div>
+    
+    <div class="container-fluid">            
+        <div class="row-fluid">
+            <div class="span2" id="leftPanel"></div>
+            <div class="span2">
+                <button type="button" id="transcriptBtn" class="buttonWidth" onclick="mainPageClick();">Transcripts</button></div>
+            <div class="span2">
+                <button type="button" id="advisorBtn" class="buttonWidth" onclick="advisorsPageClick();">Advisors</button></div>
+            <div class="span2">
+                <button type="button" id="financesBtn" class="buttonWidth" onclick="financesPageClick();">Financial Info</button></div>
+            <div class="span2">
+                <button type="button" id="catalogBtn" class="buttonWidth" onclick="catalogPageClick();">Course Catalog</button></div>
+            <div class="span2">
+                <button type="button" id="changeBtn" class="buttonWidth" onclick="majMinPageClick();">Change Major/Minor</button></div></div></div>
                 
     <script> 
         $(function() {
@@ -219,6 +242,24 @@
             })
                 
     </script>
+    
+    <script> 
+        $(function() {
+            $('#progressBar6').diagram({ 
+            size: "50", // graph size 
+            borderWidth: "6", // border width 
+            bgFill: "#f5f5f5", // background color 
+            frFill: 'black', // foreground color 
+            textSize: 15, // text color 
+            font: "san_serif", // font 
+            textWeight: "bold",
+            textColor: 'black' // text color 
+            }); 
+            
+            })
+                
+    </script>
+    
     
 </body>
        

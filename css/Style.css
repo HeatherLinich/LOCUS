@@ -31,7 +31,7 @@ body{
 #shoppingCart {
     background-color:#800000;
     float:left;
-    height: 900px;
+    height: 655px;
 }
 
 #cartText {
@@ -51,7 +51,7 @@ body{
     text-decoration: none;
     padding-left: 5px;
     padding-top: 15px;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
     font-size: 17px;
 }
 
@@ -62,6 +62,16 @@ body{
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+#pendingClass{
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 30px;
 }
 
 #chart_div {
@@ -109,6 +119,8 @@ body{
     font-size: 16pt;
     padding-left: 5px;
     padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .classHeading
@@ -162,10 +174,78 @@ body{
     font-weight: bold;
 }
 
-#communications {
-    color: #ff0000;
+#totalCredits {
+    color: black;
     font-weight: bold;
 }
+
+#history {
+    color: #ff4500;
+    font-weight: bold;
+}
+
+#leftPanel {
+    background-color:#800000;
+    float:left;
+    height: 500px;
+}
+
+#leftPanel2 {
+    background-color:#800000;
+    float:left;
+    height: 500px;
+    margin-top: -150px;
+}
+
+#transcriptBtn{
+    text-align: center;
+    background-color: #ffd700;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+ 
+#advisorBtn {
+    text-align: center;
+    background-color: #ffd700;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#financesBtn {
+    text-align: center;
+    background-color: #ffd700;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#catalogBtn{
+    text-align: center;
+    background-color: #ffd700;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#changeBtn{
+    text-align: center;
+    background-color: #ffd700;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.buttonWidth{
+    width: 225px;
+}
+
 
 #mainPage
 {
@@ -214,19 +294,19 @@ body{
     padding-top: 5px;
     font-style: italic;
     font-weight: bold;
-    font-size: 20pt;
+    font-size: 19pt;
 }
 
 .infoRow{
     background: black;
     color: white;
-    font-size: 18pt;
+    font-size: 17pt;
     padding: 12px;
     margin-right: -20px;
 }
 
 .infoRow2{
-    font-size: 18pt;
+    font-size: 17pt;
     padding: 12px;
     margin-right: -20px;
 }
@@ -247,4 +327,40 @@ body{
 
 #detailedInfo{
     margin-left: 0px;
+}
+
+#updatedInfoRow {
+    padding-top: 20px;
+}
+
+#finalEnroll
+{
+    padding: 10px;
+    margin-bottom: 40px;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.formValues {
+    font-size: 18px;
+    text-align: right;
+    width: 150px;
+    float: left;
+}
+
+#MajMinForm {
+    margin-top: 20px;
+}
+
+#submit {
+    padding:5px;
+    margin-top: 10px;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: green;
+    border-radius: 10px;
 }
