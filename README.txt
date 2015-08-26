@@ -1,0 +1,5 @@
+This project was created for Loyola University Graduate class Human Computer Interface Design.  The goal of the project was to improve on the design and functionality of a current program or system.
+
+The project was focused on improving Loyola University's LOCUS Student Center.  The Studen Center is the portion of the University's online system that allows students to register for classes, view current academic status, search for classes and view completed classes among other activities.  The Student center is difficult to use, redundant and very unintuitive.  Our group set out to make our redesign quicker and easier for the student to use and to allow them to get their desired tasks accomplished in a much smoother fashion.
+
+This project was completed by Heather Linich-Mayer & Katharine Herringshaw

@@ -35,7 +35,7 @@ var defaults = {
 	bgFill: '#bbb',
 	frFill: '#0bf',
 	textSize: 50,
-	font: "serif",
+	font: "sans_serif",
 	textColor: '#000'
 };
 
@@ -65,7 +65,8 @@ var defaults = {
 			bgFill: '#bbb',
 			frFill: '#0bf',
 			textSize: 50+'px',
-			font: "serif",
+			font: "sans_serif",
+                       
 			textColor: '#000'
 		};
 

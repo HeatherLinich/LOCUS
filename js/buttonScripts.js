@@ -1,6 +1,6 @@
 function mainPageClick()
  {
-    window.location="MainLOCUS.html"; 
+    window.location="index.html"; 
  }
    
    
@@ -23,6 +23,21 @@ function financesPageClick()
     window.location="Finances.html"; 
  }
  
+ function enrollClick2()
+ {
+     window.location="AvailableEnglishClasses.html";
+ }
+ 
+  function completedClick()
+ {
+     window.location="CompletedEnglishClasses.html";
+ }
+ 
+ function transcriptPageClick()
+ {
+    window.location="transcript.html"; 
+ }
+ 
  function advisorsPageClick()
  {
     window.location="Advisors.html"; 
@@ -38,3 +53,5 @@ function financesPageClick()
  {
     window.location="changeMajMin.html"; 
  }
+ 
+ 
